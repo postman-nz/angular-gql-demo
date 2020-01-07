@@ -1,0 +1,19 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  profile: String
+}
+
+type Group {
+  id: ID!
+  name: String!
+  description: String
+  owner: User!
+  members: [User!]
+}
+
+type Query {
+  Users: [User!]
+  User(id: ID!): User
+}
