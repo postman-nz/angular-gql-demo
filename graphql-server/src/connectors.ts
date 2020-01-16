@@ -2,29 +2,37 @@ import { IUser, IGroup } from "./models";
 import { getIntrospectionQuery } from "graphql";
 import _ from "lodash";
 
+export const CurrentUser: IUser = {
+  id: 0,
+  email: "stephen_post@trimble.com",
+  name: "Stephen Post",
+  profile: "https://picsum.photos/200/300?random=0"
+};
+
 export const Users: IUser[] = [
   {
     id: 1,
     email: "first-user@example.com",
     name: "The First User",
-    image: "https://picsum.photos/200/300?random=1"
+    profile: "https://picsum.photos/200/300?random=1"
   },
   {
     id: 2,
     email: "second-user@example.com",
     name: "The Second User",
-    image: "https://picsum.photos/200/300?random=2"
+    profile: "https://picsum.photos/200/300?random=2"
   },
   {
     id: 3,
     email: "third-user@example.com",
     name: "The Third User",
-    image: "https://picsum.photos/200/300?random=3"
+    profile: "https://picsum.photos/200/300?random=3"
   },
   {
     id: 4,
     email: "forth-user@example.com",
-    name: "The Forth User"
+    name: "The Forth User",
+    profile: "https://picsum.photos/200/300?random=4"
   }
 ];
 

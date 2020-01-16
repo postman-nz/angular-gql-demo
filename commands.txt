@@ -1,0 +1,48 @@
+# Fix profile in GraphQL -> Change image to profile in models / connectors.ts
+# add ME to GraphQL
+
+# Install Angular cli
+npm install -g @angular/cli
+
+# Create new site, add routing and use SCSS
+ng new client-site
+
+cd client-site
+
+# Add angular material, any theme, default options
+ng add @angular/material
+
+# Add MatToolBar to AppModule
+import {MatToolbarModule} from '@angular/material/toolbar';
+# Add matoolbar to app.component
+
+# add header
+
+# Add GraphQL
+ng add apollo-angular
+
+#Update uri in src/app/graphql.module.ts to
+http://localhost:3000/graphql
+
+# Create new Common Module (from root)
+ng generate module components/core
+
+# Create a new generic profile picture component, using the common module
+ng generate component components/core/profile-picture --module components/core
+
+
+#implement profile image
+# add to header
+
+
+
+
+# Generate Groups
+ng generate module components/groups
+ng generate component components/groups/list --module components/groups
+ng generate service components/groups/groups
+
+
+#implement groups list
+
+

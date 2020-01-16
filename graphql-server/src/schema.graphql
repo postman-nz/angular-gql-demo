@@ -14,6 +14,14 @@ type Group {
 }
 
 type Query {
+  Me: User
   Users: [User!]
   User(id: ID!): User
+
+  """
+  These are all the groups
+  """
+  Groups: [Group!]
+
+  Group(id: ID!): Group
 }

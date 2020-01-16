@@ -2,7 +2,7 @@ export interface IUser {
   id: number;
   name: string;
   email: string;
-  image?: string;
+  profile?: string;
 }
 
 export interface IGroup {

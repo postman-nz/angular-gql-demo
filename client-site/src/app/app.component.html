@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <div *ngIf="!loading">
+    <app-profile-picture [source]="user.profile"></app-profile-picture>
+    <span> {{ user.name }}</span>
+  </div>
+</mat-toolbar>
+
+<app-list></app-list>
+
+<router-outlet></router-outlet>

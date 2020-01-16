@@ -1,0 +1,18 @@
+<div *ngFor="let group of groups | async">
+  <mat-card class="list-card">
+    <mat-card-header>
+      <app-profile-picture [source]="group.owner.profile"></app-profile-picture>
+      <mat-card-title>{{ group.name }}</mat-card-title>
+      <mat-card-subtitle>Members: {{ group.members.length }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <app-profile-picture
+        *ngFor="let user of group.members"
+        [source]="user.profile"
+      ></app-profile-picture>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Join</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
